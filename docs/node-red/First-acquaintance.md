@@ -3,7 +3,7 @@
 本次演示基于 ARMxy BL340 设备进行演示。
 <img width="597" height="597" alt="image" src="https://github.com/user-attachments/assets/1dac653c-f305-4c1c-adfb-85b9714eda54" />
 
-1. 登录设备终端，执行以下命令检查是否预装：
+### 1. 登录设备终端，执行以下命令检查是否预装：
 
    ```bash
    node-red -v
@@ -11,7 +11,7 @@
 
    若提示 `command not found`，先完成 Node-RED 安装。
 
-2. 上传安装包到设备
+### 2. 上传安装包到设备
 
    通过 scp 或 tftp 工具将官方提供的安装包上传至设备的 `/usr/local/bin` 目录:
 
@@ -21,28 +21,28 @@
 
 ## 二、安装包解压与部署
 
-1. 进入到上传目录，解压安装包：
+### 1. 进入到上传目录，解压安装包：
 
    ```bash
    unzip node-red_64bit.zip
    ```
 <img width="581" height="29" alt="image" src="https://github.com/user-attachments/assets/6e8a6a55-f82c-4f28-b142-3a1359fbe3f6" />
 
-2. 进入目录，在目录里安装依赖库并解压 Node.js 运行环境
+### 2. 进入目录，在目录里安装依赖库并解压 Node.js 运行环境
 
    ```bash
    dpkg -i libatomic1_10.5.0-1ubuntu1~20.04_armhf.deb
    tar -xf node-v20.18.1-linux-arm64.tar
    ```
 
-3. 配置系统环境
+### 3. 配置系统环境
 
    ```bash
    echo "export PATH=/usr/local/bin/node-red_64bit/node-v20.18.1-linux-arm64/bin:\\$PATH" >> /etc/profile
    source /etc/profile
    ```
 
-4. 验证 Node 环境是否生效
+### 4. 验证 Node 环境是否生效
 
    ```bash
    node -v
@@ -51,7 +51,7 @@
 
    出现版本号即配置成功。
 
-5. 启动 node-red
+### 5. 启动 node-red
 
    ```bash
    node-red

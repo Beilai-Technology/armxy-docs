@@ -4,7 +4,11 @@ site_description: Official documentation for ARMxy industrial edge gateways
 # 主题：material 工业文档美观主题，外网展示效果好
 theme:
   name: material
-
+  palette:
+    # 亮色模式下代码块自动深色
+    - scheme: default
+      primary: indigo
+      accent: blue
 # 导航栏目录，和你仓库 docs 下文件一一对应
 nav:
   - Home: index.md

@@ -108,6 +108,7 @@ Switch 节点（温度条件分流）
 ## 7.3 温度模拟 Function 节点配置
 
 通过随机函数生成 0~39℃ 的模拟温度数据，如图：
+
 <img width="360" height="63" alt="image" src="https://github.com/user-attachments/assets/b57b6926-e66b-4e23-b946-91788f236b7e" />
 
 代码说明：Math.random() * 40 生成 0-40 随机小数，Marh.floor()向下取整，最终得到 0~39 的整数温度值。
@@ -129,9 +130,11 @@ Switch 节点（温度条件分流）
 ## 7.6 正常温度分支 Function 配置
 
 对正常温度数据进行文字封装，如图：
+
 <img width="235" height="112" alt="image" src="https://github.com/user-attachments/assets/258abeea-5678-4925-99eb-d0e0fc800e0a" />
 
 ## 7.7 最终 Debug 输出效果
+
 <img width="254" height="127" alt="image" src="https://github.com/user-attachments/assets/8b67047f-4851-40f8-8f5d-6f5cee3f2ad6" />
 
 ```

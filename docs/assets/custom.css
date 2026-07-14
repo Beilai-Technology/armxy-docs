@@ -1,0 +1,35 @@
+/* 一级标题 # 章节大标题 */
+.md-typeset h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 1em 0 0.6em;
+}
+/* 二级标题 ## 1.1 小节标题 */
+.md-typeset h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 1em 0 0.5em;
+}
+/* 三级标题 ### 1.1.1 子小节 */
+.md-typeset h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+/* 四级标题 #### */
+.md-typeset h4 {
+    font-size: 1.2rem;
+}
+/* 正文段落文字 */
+.md-typeset p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+/* 列表（圆点/数字列表） */
+.md-typeset li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+/* 代码块字号 */
+.md-typeset code {
+    font-size: 0.95rem;
+}

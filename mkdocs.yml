@@ -1,0 +1,22 @@
+site_name: ARMxy Developer Center
+
+site_description: Official documentation for ARMxy industrial edge gateways
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Introduction: getting-started/introduction.md
+
+  - Node-RED:
+      - Overview: node-red/overview.md
+      - Modbus RTU: node-red/modbus-rtu.md
+      - MQTT: node-red/mqtt.md
+
+  - Industrial Protocol:
+      - Modbus: protocol/modbus.md
+      - CAN: protocol/can.md
+      - OPC UA: protocol/opc-ua.md

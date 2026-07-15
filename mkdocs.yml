@@ -15,9 +15,6 @@ theme:
 # 导航栏目录，和你仓库 docs 下文件一一对应
 nav:
   - 首页: index.md
-  - Getting Started:
-      - Introduction: getting-started/introduction.md
-      - test: getting-started/test.md
   - Node-RED:
       - 第1篇：快速装好Node-RED，在ARMxy上跑通你的第一个节点: node-red/First-acquaintance.md
       - 第2篇：Node-RED基础节点全掌握实战教程（Inject、Debug、Switch、Function）: node-red/02-node-red.md
@@ -31,8 +28,6 @@ nav:
       - 第10篇 Node-RED 本地离线风速联动风扇控制: node-red/010-node-red.md
       - 第11章 Node-RED Exec 节点使用教程: node-red/011-node-red.md
       - 第12篇 Node-RED实现OPC UA数据采集与MQTT上报华为云 : node-red/012-node-red.md
-  - Industrial Protocol:
-      - Modbus: protocol/modbus.md
 
 extra_css:
   - assets/custom.css

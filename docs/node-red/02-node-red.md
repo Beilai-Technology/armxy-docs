@@ -1,4 +1,5 @@
 # 第2篇 Node-RED基础节点全掌握实战教程（Inject、Debug、Switch、Function）
+
 ## 一、实验目标
 
 基于ARMxy工业计算机，熟练掌握 Node-RED 开发中最核心、最高频的四个基础节点，分别为 Inject（注入节点）、Debug（调试节点）、Switch（判断节点）、Function（函数节点）。

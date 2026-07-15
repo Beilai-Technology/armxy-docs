@@ -1,4 +1,4 @@
-# 第8篇 Node-RED 双数据库存储实现
+# Node-RED 双数据库存储实现
 
 ## 1. 项目简介
 
@@ -15,7 +15,7 @@
 
 ### 2.1 架构流程
 
-<img width="554" height="101" alt="image" src="https://github.com/user-attachments/assets/df31c4a8-0aa9-40a2-939d-cd8703df5b22" />
+![宣传图](第八篇图片/1.png)
 
 ### 2.2 数据流模式
 
@@ -41,7 +41,7 @@ SHOW DATABASES;
 
 ### 3.2 验证标准
 
-<img width="554" height="109" alt="image" src="https://github.com/user-attachments/assets/1d3e0bb5-ef18-43d1-8965-8fcc68b3f4ed" />
+![宣传图](第八篇图片/2.png)
 
 返回结果中能看到iot_industrial库即为创建成功。
 
@@ -55,13 +55,13 @@ modbus-read → function 数据处理 → influxdb out
 
 ### 4.2 数据转换节点配置
 
-<img width="433" height="353" alt="image" src="https://github.com/user-attachments/assets/d60f15a3-54f7-4e9c-8f21-cbed4c66d213" />
+![宣传图](第八篇图片/3.png)
 
 ### 4.3influxdb out 节点配置
 
-<img width="429" height="322" alt="image" src="https://github.com/user-attachments/assets/a973d3ca-7513-4012-b081-a6a616e2cf84" />
+![宣传图](第八篇图片/4.png)
 
-<img width="402" height="289" alt="image" src="https://github.com/user-attachments/assets/26e6aefc-05cb-40f8-ac27-9d082a46f787" />
+![宣传图](第八篇图片/5.png)
 
 数据库：iot_industrial；数据表：modbus_data；设备标签：device；指标字段：temp（温度）、pressure（压力）。
 
@@ -71,7 +71,7 @@ modbus-read → function 数据处理 → influxdb out
 SELECT * FROM modbus_data ORDER BY time DESC LIMIT 10
 ```
 
-<img width="504" height="268" alt="image" src="https://github.com/user-attachments/assets/897442f5-d0c6-4a72-ae7b-b17895c3e47c" />
+![宣传图](第八篇图片/9.png)
 
 ## 5.SQLite 本地离线存储实现
 
@@ -119,17 +119,17 @@ CREATE TABLE modbus_data (
 
 格式转换节点
 
-<img width="511" height="391" alt="image" src="https://github.com/user-attachments/assets/5ddc1058-5b6d-43b2-a7ae-d7992c6c5cc3" />
+![宣传图](第八篇图片/6.png)
 
 SQL命令生成节点
 
-<img width="553" height="122" alt="image" src="https://github.com/user-attachments/assets/f3ff8c06-f6b8-4a61-add1-44359b219388" />
+![宣传图](第八篇图片/7.png)
 
  此节点把上一步准备好的结构化数据拼装成一条完整的sqlite3 命令行
 
 Exec 节点配置
 
-<img width="404" height="371" alt="image" src="https://github.com/user-attachments/assets/4575c5e6-c8ab-4620-97cc-af6fc96fa91a" />
+![宣传图](第八篇图片/8.png)
 
 命令（command）设为空：不预先指定任何程序，而是直接把msg.payload作为完整的命令执行。
 
@@ -141,6 +141,8 @@ sqlite3 /data/sqlite/iot.db
 # 查看最新 10 条记录
 SELECT * FROM modbus_data ORDER BY rowid DESC LIMIT 10;
 ```
+
+![宣传图](第八篇图片/10.png)
 
 | 维度 | InfluxDB | SQLite |
 | --- | --- | --- |

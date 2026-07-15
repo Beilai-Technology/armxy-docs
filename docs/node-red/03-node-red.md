@@ -117,19 +117,18 @@
    典型场景：实时监控本地指定文件、文件夹的修改、新增、删除变化，当配置文件、日志文件更新时自动触发流程，实现文件变动自动化响应。
    
 <img width="102" height="25" alt="image" src="https://github.com/user-attachments/assets/b34a2186-a8a1-44d1-829f-3dd268c5c503" />
-<img width="111" height="32" alt="image" src="https://github.com/user-attachments/assets/2c705b00-a2ff-4f8c-b0bb-bc5423eaa02d" />
 
 3. **read file 文件读取节点**
 
    典型场景：读取本地TXT、JSON、日志等各类文件的内容数据，用于加载配置参数、读取历史存储数据、解析本地离线文件。
-
-<img width="107" height="28" alt="image" src="https://github.com/user-attachments/assets/5885cd15-6ed1-4218-b28e-0f830bef5640" />
+   
+<img width="111" height="32" alt="image" src="https://github.com/user-attachments/assets/2c705b00-a2ff-4f8c-b0bb-bc5423eaa02d" />
 
 3. **write file 文件写入节点**
 
    典型场景：将设备采集数据、运行日志、告警信息、处理结果写入本地文件，实现数据本地持久化存储、日志归档。
-
-<img width="216" height="441" alt="image" src="https://github.com/user-attachments/assets/4991bac0-0e4d-4228-9cdb-865f5aec82ff" />
+   
+<img width="107" height="28" alt="image" src="https://github.com/user-attachments/assets/5885cd15-6ed1-4218-b28e-0f830bef5640" />
 
 ## 三、通过节点管理安装社区节点操作流程
 

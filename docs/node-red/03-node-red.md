@@ -59,7 +59,7 @@
 
    典型场景：向串口连接的单片机、PLC、执行器等硬件设备下发控制指令、参数配置数据，实现硬件设备的远程控制和参数调试。
 
-<img width="100" height="25" alt="image" src="https://github.com/user-attachments/assets/db73e2b4-a11e-4da4-bb26-ee43e72a746b" />
+<img width="106" height="25" alt="image" src="https://github.com/user-attachments/assets/9e57a3de-9e53-4f8b-9f50-5888a06c4883" />
 
 4. **MQTT out 消息发布输出节点**
 
@@ -87,25 +87,26 @@
 
    典型场景：快速修改、新增、删除、重命名报文对象中的字段，转换数据格式、替换指定内容，无需编写代码即可完成常规数据规整。
 
-<img width="107" height="29" alt="image" src="https://github.com/user-attachments/assets/391b304f-2972-413c-aa0b-567e10fb9e30" />
+<img width="109" height="25" alt="image" src="https://github.com/user-attachments/assets/0d4d289e-0d91-4944-861b-28d074f482bb" />
 
 6. **Template 模板渲染节点**
 
    典型场景：按照自定义模板格式化数据，将零散数据拼接为JSON、字符串、报文协议格式，适配设备通信、数据上报的格式要求。
 
-<img width="106" height="27" alt="image" src="https://github.com/user-attachments/assets/ba2a0f97-af18-495a-8412-b5c96dda070e" />
+<img width="107" height="29" alt="image" src="https://github.com/user-attachments/assets/391b304f-2972-413c-aa0b-567e10fb9e30" />
 
 7. **Delay 延时节点**
 
    典型场景：控制数据流的传输延时，实现指令延时下发、流程时序控制，也可用于防抖、限流，避免高频数据频繁触发业务流程。
 
-<img width="106" height="23" alt="image" src="https://github.com/user-attachments/assets/513276f4-0b64-4def-943c-fd634812c9f1" />
+<img width="106" height="27" alt="image" src="https://github.com/user-attachments/assets/ba2a0f97-af18-495a-8412-b5c96dda070e" />
 
 8. **Filter 数据过滤节点**
 
    典型场景：筛选符合条件的有效数据，过滤空数据、异常数据、重复数据、无效报文，保证后续业务流程只处理合规数据。
+   
+<img width="106" height="23" alt="image" src="https://github.com/user-attachments/assets/513276f4-0b64-4def-943c-fd634812c9f1" />
 
-<img width="102" height="25" alt="image" src="https://github.com/user-attachments/assets/b34a2186-a8a1-44d1-829f-3dd268c5c503" />
 
 ### （四）存储类节点
 
@@ -114,10 +115,11 @@
 1. **Watch（文件变化）文件监听节点**
 
    典型场景：实时监控本地指定文件、文件夹的修改、新增、删除变化，当配置文件、日志文件更新时自动触发流程，实现文件变动自动化响应。
-
+   
+<img width="102" height="25" alt="image" src="https://github.com/user-attachments/assets/b34a2186-a8a1-44d1-829f-3dd268c5c503" />
 <img width="111" height="32" alt="image" src="https://github.com/user-attachments/assets/2c705b00-a2ff-4f8c-b0bb-bc5423eaa02d" />
 
-2. **read file 文件读取节点**
+3. **read file 文件读取节点**
 
    典型场景：读取本地TXT、JSON、日志等各类文件的内容数据，用于加载配置参数、读取历史存储数据、解析本地离线文件。
 

@@ -4,7 +4,7 @@
 
 基于ARMxy工业计算机，熟练掌握 Node-RED 开发中最核心、最高频的四个基础节点，分别为 Inject（注入节点）、Debug（调试节点）、Switch（判断节点）、Function（函数节点）。
 
-<img width="642" height="642" alt="1" src="https://github.com/user-attachments/assets/e7037a27-f3b3-431e-b515-a6d13d5988de" />
+![宣传图](picture/1.png)
 
 ## 二、Node-RED 消息机制简介
 

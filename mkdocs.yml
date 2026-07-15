@@ -12,7 +12,7 @@ theme:
       accent: blue
 # 导航栏目录，和你仓库 docs 下文件一一对应
 nav:
-  - Home: index.md
+  - 首页: index.md
   - Getting Started:
       - Introduction: getting-started/introduction.md
       - test: getting-started/test.md

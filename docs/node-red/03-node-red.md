@@ -80,8 +80,8 @@
 3. **Function 自定义函数节点**
 
    典型场景：通过编写JavaScript 自定义代码，实现复杂数据运算、数据解析、变量定义、自定义逻辑处理，适配标准化节点无法满足的个性化业务需求。
-   
-<img width="109" height="25" alt="image" src="https://github.com/user-attachments/assets/0d4d289e-0d91-4944-861b-28d074f482bb" />
+
+<img width="105" height="24" alt="image" src="https://github.com/user-attachments/assets/2e1bc343-e932-4752-83fe-7bfd24e5bf1b" />
 
 5. **Change 数据修改节点**
 

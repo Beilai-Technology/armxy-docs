@@ -4,7 +4,7 @@
 
 本文以ARMxy边缘计算网关内置Node-RED平台为核心运行环境，通过Modbus Slave软件模拟Modbus RTU从站设备，实现串口通信配置、保持寄存器数据读取、数据调试校验全流程。
 
-<img width="554" height="554" alt="image" src="https://github.com/user-attachments/assets/391c2091-0bea-4758-b1ab-8387a61065f4" />
+![宣传图](第五篇图片/6.png)
 
 ## 2 Modbus协议基础简介
 
@@ -79,7 +79,7 @@ Plain Text
 
 ### 5.1 基础参数配置
 
-<img width="356" height="327" alt="image" src="https://github.com/user-attachments/assets/ecff20cb-8776-4793-8471-f63deef8055b" />
+![宣传图](第五篇图片/1.png)
 
 从站地址（Slave ID）：1
 
@@ -93,7 +93,7 @@ Plain Text
 
 为方便后续读取测试，预设3组保持寄存器数据：
 
-<img width="225" height="124" alt="image" src="https://github.com/user-attachments/assets/252a2400-844e-4a4e-b699-edc4a41be2e0" />
+![宣传图](第五篇图片/5.png)
 
 ## 6 核心功能节点说明
 
@@ -107,17 +107,17 @@ modbus-write：Modbus数据写入节点，可向从站寄存器写入数值
 
 双击打开modbus-read节点，配置串口通信核心参数，所有参数必须与Modbus Slave模拟从站参数一致，否则通信失败，标准配置如下：
 
-<img width="399" height="547" alt="image" src="https://github.com/user-attachments/assets/a38928d8-a0a9-4456-841f-87561d856031" />
+![宣传图](第五篇图片/3.png)
 
 Serial port 需填写真实接线端口
 
-<img width="484" height="401" alt="image" src="https://github.com/user-attachments/assets/6d9a5247-6f5f-41cf-891c-14b2577df82b" />
+![宣传图](第五篇图片/2.png)
 
 ## 8 数据读取结果
 
 在Node-RED流程中添加Debug节点，对接modbus-read输出端，部署流程后可在调试窗口查看数据。
 
-<img width="217" height="97" alt="image" src="https://github.com/user-attachments/assets/67e555dd-e8dd-4a24-939f-663d95b492a8" />
+![宣传图](第五篇图片/4.png)
 
 ## 9 常见故障排查方案
 

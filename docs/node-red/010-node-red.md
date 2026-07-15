@@ -6,7 +6,7 @@
 
 本方案基于BL118边缘计算网关，打造一套集风速数据采集、本地逻辑PID闭环控制的轻量化智能风速控制系统。
 
-<img width="553" height="553" alt="image" src="https://github.com/user-attachments/assets/2fc6af12-6dc0-41cc-b2b4-d9825eb9fda0" />
+![宣传图](第十篇图片/6.png)
 
 系统依托网关RS485工业接口接入风速传感器与变频器，在边缘端完成全自主风速闭环调控。
 
@@ -18,7 +18,7 @@
 
 ### 1.3 整体流程
 
-<img width="491" height="46" alt="image" src="https://github.com/user-attachments/assets/4939ed77-21f6-49f5-b000-7c25ad6c4a16" />
+![宣传图](第十篇图片/1.png)
 
 ## 2 设备清单
 
@@ -32,11 +32,11 @@
 
 本方案基于BL118板载X1模块的ttyAS4和ttyAS5端口来连接设备，实现风速数据采集与变频器控制，设备的通信参数需根据设备手册进行配置。
 
-<img width="554" height="116" alt="image" src="https://github.com/user-attachments/assets/9395d1d0-0484-4f8b-9ffd-1f40e6219214" />
+![宣传图](第十篇图片/2.png)
 
 ### 3.1 配置风速采集节点
 
-<img width="381" height="467" alt="image" src="https://github.com/user-attachments/assets/295567ac-a1c8-4a2d-9869-a989eccce609" />
+![宣传图](第十篇图片/5.png)
 
 ### 3.2 配置核心自动控制Function节点
 
@@ -97,7 +97,7 @@ return { payload: reg_value };
 
 ### 3.3 添加变频输出写入节点
 
-<img width="519" height="363" alt="image" src="https://github.com/user-attachments/assets/a2622844-f11c-4a3e-b43f-81126f8262ec" />
+![宣传图](第十篇图片/3.png)
 
 ## 4 功能说明
 
@@ -139,7 +139,7 @@ return { payload: reg_value };
 - 节点状态栏正常刷新，实时显示风速与输出频率
 - 断开网络后，控制逻辑完全正常运行
 
-<img width="131" height="47" alt="image" src="https://github.com/user-attachments/assets/4aadbb8d-9ad9-4151-93f8-0cb7dc19974a" />
+![宣传图](第十篇图片/4.png)
 
 ## 7 总结
 

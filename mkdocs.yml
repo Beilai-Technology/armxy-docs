@@ -24,3 +24,6 @@ nav:
 
 extra_css:
   - assets/custom.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/translate-js@1.2.0/dist/translate.min.js

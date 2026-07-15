@@ -1,26 +1,28 @@
-# 一、内容简介
+# 第12篇 Node-RED实现OPC UA数据采集与MQTT上报华为云 
+
+## 一、内容简介
 
 在工业现场中，网关作为边缘数据处理节点，通过 OPC UA  协议连接 PLC 、工业控制设备或其他支持 OPC UA  的数据源，实现现场设备数据的标准化采集；随后利用 MQTT  协议将采集后的数据经过格式转换后安全、高效地上传至华为云 IoT  平台，实现设备数据的远程监控与管理。
 
 本教程基于钡铼技术 BL118  边缘计算网关搭建一个完整的边缘数据采集与上云流程：使用网关内置 Node-RED  平台，通过 OPC UA  协议采集工业设备数据（使用本地模拟 OPC UA服务器），再通过 MQTT  协议将数据上报到华为云 IoT  平台。
 
-# 二、前置准备 
+## 二、前置准备 
 
-## 2.1 OPC UA 插件安装 
+### 2.1 OPC UA 插件安装 
 
 打开 Node-RED  右上角菜单 - 管理面板 - 安装，搜索插件： node-red-contrib-opcua ，点击安装； 
 
 安装完成后左侧节点栏出现 opcua-server 、 opcua-client 、 opcua  工具类节点，用于搭建本地OPC UA  服务与采集客户端。 
 
-## 2.2 华为云IoT 平台准备 
+### 2.2 华为云IoT 平台准备 
 
 1.  登录华为云 IoTDA ，创建产品、注册设备，获取设备 ID 、产品 ID ；
 2.  使用华为云 MQTT  客户端生成工具（地址： https://iot-tool.obs-website.cn-north-4.myhuaweicloud.com/ ）生成 MQTT  连接客户端 ID 、用户名、密码； 
 3.  记录 IoTDA  接入域名、 MQTT  端口（标准 1883  非加密 /8883 TLS  加密）。
 
-# 三、OPC UA 完整配置流程 
+## 三、OPC UA 完整配置流程 
 
-## 3.1 创建本地模拟OPC UA Server
+### 3.1 创建本地模拟OPC UA Server
 
 1.  拖拽 opcua-server  节点至画布，双击打开配置面板：
 
@@ -36,7 +38,7 @@ OPC UA server
 
 running
 
-## 3.2 OPC UA Client客户端配置
+### 3.2 OPC UA Client客户端配置
 
 
 从 Node-Red左侧面板中拖一个OpeUa-Client节点到工作区, 双击OpcUa-Client节点, 配置如下：
@@ -47,7 +49,7 @@ running
 
 <img width="380" height="290" alt="image" src="https://github.com/user-attachments/assets/e85f14b9-96b4-4601-a833-725f69cf55d0" />
 
-## 3.3 创建OPC UA测试变量
+### 3.3 创建OPC UA测试变量
 
 1. 拖拽 inject  注入节点，命名 add value ，配置如下：
 
@@ -58,7 +60,7 @@ running
 
 <img width="157" height="123" alt="image" src="https://github.com/user-attachments/assets/9f3cc0eb-5b1a-4aee-ad17-f4f2258614be" />
 
-## 3.4 订阅OPC UA 变量实时数据 
+### 3.4 订阅OPC UA 变量实时数据 
 1.  复制 add value  节点，重命名为 Subscribe ，修改消息配置：
 
 <img width="421" height="138" alt="image" src="https://github.com/user-attachments/assets/a0a20875-56c3-439b-b5e9-56306fcf7031" />
@@ -68,7 +70,7 @@ running
 
 <img width="174" height="211" alt="image" src="https://github.com/user-attachments/assets/1bceb361-498a-4b93-9702-97f9d64be8e7" />
 
-## 3.5 取消订阅 
+### 3.5 取消订阅 
 
 
 1. 复制 Subscribe节点, 命名 Unsubscribe, 修改 payload:
@@ -77,9 +79,9 @@ running
 
 2.触发节点后日志提示 unsubscribing，停止接收该变量推送。
 
-# 四、MQTT节点对接华为云IoTDA配置
+## 四、MQTT节点对接华为云IoTDA配置
 
-## 4.1m qtt节点配置
+### 4.1m qtt节点配置
 
 拖入一个 mqtt out节点，双击配置如下：
 
@@ -93,7 +95,7 @@ running
 
 <img width="493" height="133" alt="image" src="https://github.com/user-attachments/assets/2f329f2a-633d-419a-a5c1-90e2c034006b" />
 
-## 4.2 Function数据格式转换节点
+### 4.2 Function数据格式转换节点
 
 OPC UA采集到的原始数据不能直接上报，需要转换为华为云IoTDA要求的JSON格式。在OpeUa-Client和 mqtt out节点之间拖入一个 Function节点, 双击打开编辑, 填入以下代码：
 
@@ -116,7 +118,7 @@ msg. payload= JSON. stringify(res);
 return msg;
 ```
 
-# 五、云端验证
+## 五、云端验证
 
 全部节点部署完成，先点击订阅，此时还未赋值，执行 add value 创建变量后，再触发Subscribe 开启实时采集，此时云端变量值变为设定的30；
 
@@ -124,7 +126,7 @@ return msg;
 
 <img width="200" height="122" alt="image" src="https://github.com/user-attachments/assets/c9872aa8-6d8e-4b10-b1e5-bd13747e1203" />
 
-# 六、OPC UA、MQTT优缺点对比
+## 六、OPC UA、MQTT优缺点对比
 
 | 对比项 | OPC UA | MQTT |
 | 主要用途 | 工业设备数据采集 | 工业设备数据采集 |
@@ -136,7 +138,7 @@ return msg;
 
 OPC UA和MQTT并不是替代关系，而是上下游协作关系。OPC UA负责工业现场数据标准化采集，MQTT负责数据高效传输到云平台。
 
-# 七、总结
+## 七、总结
 
 在工业物联网场景中，OPCUA与MQTT组合是一种常见的数据上云架构。OPCUA负责现场设备数据采集，MQTT 负责边缘侧与云平台的数据传输，两者结合能够兼顾工业兼容性和云端接入效率。
 

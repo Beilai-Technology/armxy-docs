@@ -10,6 +10,8 @@ theme:
     - scheme: default
       primary: indigo
       accent: blue
+  features:
+    - toc.integrate
 # 导航栏目录，和你仓库 docs 下文件一一对应
 nav:
   - 首页: index.md

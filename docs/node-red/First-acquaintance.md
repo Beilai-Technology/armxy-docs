@@ -3,6 +3,7 @@
 ## 一、 确认设备已预装 Node-RED
 
 本次演示基于 ARMxy BL340 设备进行演示。
+
 <img width="597" height="597" alt="image" src="https://github.com/user-attachments/assets/1dac653c-f305-4c1c-adfb-85b9714eda54" />
 
 ### 1. 登录设备终端，执行以下命令检查是否预装：

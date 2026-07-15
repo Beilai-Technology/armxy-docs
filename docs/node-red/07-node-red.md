@@ -1,4 +1,4 @@
-<img width="553" height="392" alt="image" src="https://github.com/user-attachments/assets/574ee4af-49ca-4674-8a5d-3cbe7ae0a8d2" /># 第7篇 基于 Node-RED 的自定义TCP协议通信实现
+# 第7篇 基于 Node-RED 的自定义TCP协议通信实现
 
 ## 1 前言
 

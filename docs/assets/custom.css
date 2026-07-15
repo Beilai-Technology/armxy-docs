@@ -33,3 +33,10 @@
 .md-typeset code {
     font-size: 0.95rem;
 }
+
+#google_translate_element {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+}

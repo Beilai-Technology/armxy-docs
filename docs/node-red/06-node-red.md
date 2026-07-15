@@ -1,4 +1,4 @@
-<img width="487" height="644" alt="image" src="https://github.com/user-attachments/assets/7604c6d8-07c2-4935-bfd3-be1a4cd43a4e" /># 第6 篇 Node-RED Modbus RTU 数据采集及MQTT 云端上传演示
+# Node-RED Modbus RTU 数据采集及MQTT 云端上传演示
 
 ## 1. 项目概述
 

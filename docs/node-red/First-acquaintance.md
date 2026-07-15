@@ -1,4 +1,4 @@
-# 第1篇：快速装好Node-RED，在ARMxy上跑通你的第一个节点
+# 快速装好Node-RED，在ARMxy上跑通你的第一个节点
 
 ## 一、 确认设备已预装 Node-RED
 

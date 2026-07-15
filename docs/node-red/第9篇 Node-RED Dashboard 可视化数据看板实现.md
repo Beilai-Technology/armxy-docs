@@ -1,4 +1,4 @@
-# 第9篇 Node-RED Dashboard 可视化数据看板实现
+# Node-RED Dashboard 可视化数据看板实现
 
 ## 简介  
 本教程利用Node-RED Dashboard 搭建一个具备实时数据展示、历史趋势追踪、交互控制的完整物联网看板。  
@@ -18,7 +18,7 @@ Tab  和 Group  在控件里面进行配置
 ## 3. 常用可视化控件快速认知  
 本项目用到  4  个常用核心控件：  
 
-<img width="133" height="34" alt="image" src="https://github.com/user-attachments/assets/64f52cf4-fccc-4bda-9505-d642ed592a3f" />
+![宣传图](第九篇图片/9.png)
 
 ### Gauge 仪表盘：
 
@@ -33,7 +33,7 @@ Tab  和 Group  在控件里面进行配置
 - **Sectors**：两段阈值，划分三色区间  
 - **Name**：编辑器节点备注名称  
 
-<img width="133" height="30" alt="image" src="https://github.com/user-attachments/assets/838d7d84-694e-4ca7-8b36-ffeca60f53f9" />
+![宣传图](第九篇图片/10.png)
 
 ### Chart 趋势图：
 
@@ -46,7 +46,7 @@ Tab  和 Group  在控件里面进行配置
 - **Series Colours**：多条曲线自动分配的配色  
 - **Blank label**：无数据时展示的提示文字  
 
-<img width="133" height="31" alt="image" src="https://github.com/user-attachments/assets/f88ff4b8-6c61-4136-b602-e81afbdee40b" />
+![宣传图](第九篇图片/11.png)
 
 ### Text 文本控件:
 
@@ -55,7 +55,7 @@ Tab  和 Group  在控件里面进行配置
 - **Style**：Apply Style 开启后可自定义文字颜色、字号等样式  
 - **Class**：自定义 CSS样式类，进阶美化控件  
 
-<img width="133" height="37" alt="image" src="https://github.com/user-attachments/assets/f6dd8eb7-b5f4-428a-a7df-70d10e0b81ce" />
+![宣传图](第九篇图片/1.png)
 
 ### Button 按钮控件:
 
@@ -71,13 +71,13 @@ Tab  和 Group  在控件里面进行配置
 
 ### 4.1 架构流程  
 
-<img width="554" height="190" alt="image" src="https://github.com/user-attachments/assets/36a0740f-ccb6-4e47-9df3-a0b442bf587e" />
+![宣传图](第九篇图片/2.png)
 
 ### 4.3 节点分步配置讲解  
 
 #### 4.3.1 模拟传感器 (Inject节点)  
 
-<img width="554" height="148" alt="image" src="https://github.com/user-attachments/assets/8ec7c12a-58c7-4230-8f79-7ae625c5edeb" />
+![宣传图](第九篇图片/3.png)
 
 自动触发数据采集，模拟传感器 10 秒上报一次数据，无需手动触发。真实项目中可直接替换为 MQTT/Modbus 传感器采集节点。
 
@@ -102,13 +102,13 @@ return[msg_temp, msg_humi,[msg_temp, msg_humi]];
 
 #### 4.3.4 温湿度趋势图 (Chart)
 
-<img width="473" height="687" alt="image" src="https://github.com/user-attachments/assets/d408a591-367b-4746-a2e4-abfbe65865ed" />
+![宣传图](第九篇图片/4.png)
 
 自动记录近 10分钟温湿度数据，生成双曲线折线图，时间轴精确到时分秒，自动清理过期数据，界面直观展示数据波动趋势。  
 
 #### 4.3.5 告警灯开关(Button)
 
-<img width="434" height="81" alt="image" src="https://github.com/user-attachments/assets/1f919df9-1bb4-4e0e-bee0-5e093dd62cf7" />
+![宣传图](第九篇图片/5.png)
 
 每次点击按钮，会向下游告警逻辑 Function节点发送一条完整消息：  
 
@@ -134,13 +134,13 @@ return msg;
 
 **效果展示**：  
 
-<img width="110" height="41" alt="image" src="https://github.com/user-attachments/assets/34805888-e9fe-40e0-8a13-bd88b8d74bba" />
+![宣传图](第九篇图片/6.png)
 
-<img width="106" height="35" alt="image" src="https://github.com/user-attachments/assets/610d9bd4-a0ea-4bab-a99f-8c50d38eda69" />
+![宣传图](第九篇图片/7.png)
 
 ### 4.4 页面布局结构  
 
-<img width="554" height="242" alt="image" src="https://github.com/user-attachments/assets/ee1f7433-f0cd-4e60-89d3-27772a6a8b87" />
+![宣传图](第九篇图片/8.png)
 
 - **主标签页**：车间温湿度监控  
 - **分组1 (实时数据与告警)**：温度表盘、湿度表盘、告警按钮、状态文本  

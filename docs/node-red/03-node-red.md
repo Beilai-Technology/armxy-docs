@@ -138,19 +138,19 @@ Node-RED默认基础节点功能有限。可通过内置「节点管理」功能
 
 打开 Node-RED编辑器页面，点击页面右上角的菜单图标，在弹出的下拉菜单中选择「节点管理」，即可进入节点管理配置面板。
 
-<img width="459" height="180" alt="image" src="https://github.com/user-attachments/assets/9efdc6e9-67cc-4f39-ab98-54c01b1ac11b" />
+![Uploading image.png…]()
 
 ### 步骤2：切换安装标签页
 
 在节点管理面板中，点击切换至「安装」标签页，系统会自动加载官方社区开源节点库。
 
-<img width="463" height="653" alt="image" src="https://github.com/user-attachments/assets/818059ed-485f-49a2-b08c-6b5384c59f7a" />
+<img width="459" height="180" alt="image" src="https://github.com/user-attachments/assets/9efdc6e9-67cc-4f39-ab98-54c01b1ac11b" />
 
 ### 步骤3：搜索目标社区节点
 
 在页面搜索框中输入需要安装的节点包名称（如 modbus、influxdb、redis、ocr等业务节点包），搜索结果会展示对应的社区节点插件，同时显示插件介绍、版本、下载量及适配版本信息。
 
-![Uploading image.png…]()
+<img width="463" height="653" alt="image" src="https://github.com/user-attachments/assets/818059ed-485f-49a2-b08c-6b5384c59f7a" />
 
 ### 补充注意事项
 - 安装社区节点需保证设备网络正常，可正常访问 Node-RED 官方插件库；

@@ -1,4 +1,4 @@
-# 第7篇 基于 Node-RED 的自定义TCP协议通信实现
+# 基于 Node-RED 的自定义TCP协议通信实现
 
 ## 1 前言
 
@@ -43,7 +43,7 @@
 
 ### 3.1 整体流程图
 
-<img width="553" height="103" alt="image" src="https://github.com/user-attachments/assets/f80fbf09-be27-4152-9173-24b4da6105c6" />
+![宣传图](第七篇图片/3.png)
 
 ### 3.2 业务通信流程
 
@@ -63,13 +63,13 @@
 
 首先拖入 TCP Request 节点，配置如下：
 
-<img width="450" height="326" alt="image" src="https://github.com/user-attachments/assets/f546af93-883c-4834-964b-ca153966cfac" />
+![宣传图](第七篇图片/4.png)
 
 本教程使用网络调试助手模拟 TCP Server，Node-RED 作为 TCP Client 与其建立连接。实际应用时，将服务器地址和端口修改为设备实际参数即可。
 
 ### 4.2 Inject节点配置
 
-<img width="361" height="128" alt="image" src="https://github.com/user-attachments/assets/d43c65ee-f0ce-4a19-82d7-61b30a837184" />
+![宣传图](第七篇图片/1.png)
 
 开启Repeat循环模式。
 
@@ -198,7 +198,7 @@ return msg;
 
 解析成功后，Debug 节点输出标准化 JSON 结构化数据，可直接用于后续逻辑开发：
 
-<img width="243" height="235" alt="image" src="https://github.com/user-attachments/assets/e9cefb68-d2af-4e10-94a8-6724a89e6e45" />
+![宣传图](第七篇图片/5.png)
 
 ## 7 调试与问题排查方案
 
@@ -209,7 +209,7 @@ return msg;
 
 - **Wireshark抓包调试**：
 
-<img width="553" height="392" alt="image" src="https://github.com/user-attachments/assets/5dfc4403-f939-4cc9-b866-30fdfec5cbe4" />
+![宣传图](第七篇图片/2.png)
 
 Wireshark 抓取 TCP 报文，对比发送数据与实际网络数据是否一致，定位协议问题。
 

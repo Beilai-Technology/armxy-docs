@@ -4,7 +4,7 @@
 
 本次演示基于 ARMxy BL340 设备进行演示。
 
-<img width="597" height="597" alt="image" src="https://github.com/user-attachments/assets/1dac653c-f305-4c1c-adfb-85b9714eda54" />
+![宣传图](第一篇图片/1.png)
 
 ### 1. 登录设备终端，执行以下命令检查是否预装：
 
@@ -29,7 +29,7 @@
    ```bash
    unzip node-red_64bit.zip
    ```
-<img width="581" height="29" alt="image" src="https://github.com/user-attachments/assets/6e8a6a55-f82c-4f28-b142-3a1359fbe3f6" />
+![宣传图](第二篇图片/2.png)
 
 ### 2. 进入目录，在目录里安装依赖库并解压 Node.js 运行环境
 
@@ -72,7 +72,7 @@ Node-RED 编辑器分为三个核心区域：
 | 中间：工作区 | 拖拽节点、连接节点、搭建业务流程的画布区域 |
 | 右侧：信息面板 | 查看流程运行日志、节点输出<br>Debug：查看选中节点的配置与说明<br>上下文面板：查看/管理流程变量与全局变量<br>配置面板：编辑器全局配置、节点管理 |
 
-<img width="399" height="398" alt="image" src="https://github.com/user-attachments/assets/5ffffc4c-ccf1-4373-9521-72f2150afc7f" />
+![宣传图](第二篇图片/3.png)
 
 ## 四、创建第一个流程
 
@@ -85,7 +85,7 @@ Node-RED 编辑器分为三个核心区域：
 
 将鼠标指针移动到 inject 节点的右侧，按住左键拖动到 debug 节点的左侧，松开鼠标完成连接。
 
-<img width="325" height="96" alt="image" src="https://github.com/user-attachments/assets/acac5d0d-05ba-426e-ba35-79302a64102f" />
+![宣传图](第二篇图片/4.png)
 
 ### 步骤 3：配置节点
 
@@ -93,7 +93,8 @@ Node-RED 编辑器分为三个核心区域：
     - 将「Payload」类型修改为 `string`
     - 输入 `Hello, Node-RED`
     - 点击「完成」保存配置。
-<img width="501" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c9e007-2861-4274-8de2-941defebbd7b" />
+
+![宣传图](第二篇图片/5.png)
 
 2. debug 节点默认配置无需修改，会直接输出所有收到的消息。
 
@@ -102,7 +103,8 @@ Node-RED 编辑器分为三个核心区域：
 1. 点击编辑器右上角的红色「部署」按钮，将流程保存到设备并启动。
 2. 点击 inject 节点左侧的蓝色按钮（触发按钮），手动触发一次流程。
 3. 打开右侧 Debug 面板，即可看到 debug 节点输出的消息内容。
-<img width="225" height="72" alt="image" src="https://github.com/user-attachments/assets/59fbe1a9-1c02-4bbe-b9d7-d4783992efbb" />
+
+![宣传图](第二篇图片/6.png)
 
 ## 五、导出流程
 

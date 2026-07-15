@@ -1,4 +1,4 @@
-# 第12篇 Node-RED实现OPC UA数据采集与MQTT上报华为云 
+# Node-RED实现OPC UA数据采集与MQTT上报华为云 
 
 ## 一、内容简介
 
@@ -26,13 +26,11 @@
 
 1.  拖拽 opcua-server  节点至画布，双击打开配置面板：
 
-<img width="365" height="748" alt="image" src="https://github.com/user-attachments/assets/78500024-8569-4460-b34b-3169bf601284" />
-
-<img width="142" height="54" alt="image" src="https://github.com/user-attachments/assets/723d7d84-ab7a-4905-8079-abcdb18fd950" />
+![宣传图](第十二篇图片/12.png)
 
 2.部署流程后可以看到OPC UA服务器正常运行。
 
-
+![宣传图](第十二篇图片/13.png)
 
 OPC UA server
 
@@ -40,42 +38,41 @@ running
 
 ### 3.2 OPC UA Client客户端配置
 
-
 从 Node-Red左侧面板中拖一个OpeUa-Client节点到工作区, 双击OpcUa-Client节点, 配置如下：
 
-<img width="377" height="424" alt="image" src="https://github.com/user-attachments/assets/0562112e-2d2a-4fbb-b280-66d87213557d" />
+![宣传图](第十二篇图片/11.png)
 
 点击 Endpoint后的"笔型"按钮,打开 Endpoint编辑页面, IP地址为OPC UA Server所在设备地址，配置如下：
 
-<img width="380" height="290" alt="image" src="https://github.com/user-attachments/assets/e85f14b9-96b4-4601-a833-725f69cf55d0" />
+![宣传图](第十二篇图片/14.png)
 
 ### 3.3 创建OPC UA测试变量
 
 1. 拖拽 inject  注入节点，命名 add value ，配置如下：
 
-<img width="554" height="121" alt="image" src="https://github.com/user-attachments/assets/6c45d641-15bb-4277-9d4b-c908287e4b07" />
+![宣传图](第十二篇图片/1.png)
 
 2.  连接 debug  调试节点到 server  节点后面，部署流程；
 3.  手动点击 inject  节点触发，调试窗口输出变量创建成功日志
 
-<img width="157" height="123" alt="image" src="https://github.com/user-attachments/assets/9f3cc0eb-5b1a-4aee-ad17-f4f2258614be" />
+![宣传图](第十二篇图片/2.png)
 
 ### 3.4 订阅OPC UA 变量实时数据 
 1.  复制 add value  节点，重命名为 Subscribe ，修改消息配置：
 
-<img width="421" height="138" alt="image" src="https://github.com/user-attachments/assets/a0a20875-56c3-439b-b5e9-56306fcf7031" />
+![宣传图](第十二篇图片/3.png)
 
 2.  将 Subscribe  节点输出连接至 opcua-client  输入端；
 3.  部署流程后，服务端会重启，需先执行 add value  重建变量，再触发 Subscribe  订阅；
 
-<img width="174" height="211" alt="image" src="https://github.com/user-attachments/assets/1bceb361-498a-4b93-9702-97f9d64be8e7" />
+![宣传图](第十二篇图片/4.png)
 
 ### 3.5 取消订阅 
 
 
 1. 复制 Subscribe节点, 命名 Unsubscribe, 修改 payload:
 
-<img width="428" height="149" alt="image" src="https://github.com/user-attachments/assets/944f6cad-2456-433d-9d37-2bc7f3ceb596" />
+![宣传图](第十二篇图片/5.png)
 
 2.触发节点后日志提示 unsubscribing，停止接收该变量推送。
 
@@ -85,15 +82,15 @@ running
 
 拖入一个 mqtt out节点，双击配置如下：
 
-<img width="384" height="302" alt="image" src="https://github.com/user-attachments/assets/dac98efe-ff41-4d23-8c61-76e46db2f035" />
+![宣传图](第十二篇图片/6.png)
 
 上报主题: 华为云标准属性上报主题$ oc/ devices/{device _ id}/ sys/ properties/ report.(device _ id}替换为真实设备ID;
 
 点击服务端后的"笔型"按钮，配置接入信息
 
-<img width="464" height="317" alt="image" src="https://github.com/user-attachments/assets/dcbd4761-107b-4e1c-9d98-46242b1f9c4d" />
+![宣传图](第十二篇图片/7.png)
 
-<img width="493" height="133" alt="image" src="https://github.com/user-attachments/assets/2f329f2a-633d-419a-a5c1-90e2c034006b" />
+![宣传图](第十二篇图片/8.png)
 
 ### 4.2 Function数据格式转换节点
 
@@ -122,9 +119,9 @@ return msg;
 
 全部节点部署完成，先点击订阅，此时还未赋值，执行 add value 创建变量后，再触发Subscribe 开启实时采集，此时云端变量值变为设定的30；
 
-<img width="208" height="120" alt="image" src="https://github.com/user-attachments/assets/735f8899-18dd-418f-8f15-e12ebc735c81" />
+![宣传图](第十二篇图片/9.png)
 
-<img width="200" height="122" alt="image" src="https://github.com/user-attachments/assets/c9872aa8-6d8e-4b10-b1e5-bd13747e1203" />
+![宣传图](第十二篇图片/10.png)
 
 ## 六、OPC UA、MQTT优缺点对比
 

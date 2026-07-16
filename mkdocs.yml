@@ -14,7 +14,6 @@ theme:
       primary: black
       accent: blue
 
-  footer: false
 # 导航栏目录，和你仓库 docs 下文件一一对应
 nav:
   - 首页: index.md

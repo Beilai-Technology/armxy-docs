@@ -6,12 +6,12 @@ theme:
   name: material
   custom_dir: overrides
   language: zh
-  logo: assets/图片材料/钡铼logo2024.png
-  favicon: assets/图片材料/钡铼logo2024.png
+  logo: assets/图片材料/钡铼技术.png
+  favicon: assets/图片材料/钡铼技术.png
   palette:
     # 亮色模式下代码块自动深色
     - scheme: default
-      primary: indigo
+      primary: black
       accent: blue
 
   footer: false

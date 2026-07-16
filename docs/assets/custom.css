@@ -44,31 +44,36 @@
 }
 
 /* ==========================
-   顶部导航栏加宽、拉高、Logo清晰不压缩
+   Logo大小优化
    ========================== */
-/* 顶栏容器铺满全屏，加高整体高度 */
+
 .md-header__inner {
     max-width: 100% !important;
     padding: 0 2rem !important;
-    height: 80px !important;
+    height: 96px !important;
 }
 
-/* Logo区域放大，整体右移 */
+
 .md-header__button.md-logo {
     height: 100%;
-    padding: 8px 0;
-    margin-left: 5rem !important;
-}
-.md-header__button.md-logo img {
-    height: 64px !important;
-    width: auto;
+    padding: 3px 0;
+    margin-left: 6rem !important;
 }
 
-/* 右侧站点标题垂直居中 */
+
+.md-header__button.md-logo img {
+    height: 88px !important;
+    width: 88px !important;
+    object-fit: contain;
+}
+
+/* 标题垂直对齐 Logo */
 .md-header__title {
     display: flex;
     align-items: center;
     height: 100%;
+    padding-top: 23px;
+    box-sizing: border-box;
 }
 
 /* 翻译、搜索按钮垂直居中对齐 */

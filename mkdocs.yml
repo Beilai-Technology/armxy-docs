@@ -21,7 +21,7 @@ nav:
       - 第3篇 常用功能与社区节点: node-red/第3篇：Node-RED常用功能节点盘点及社区节点安装.md
       - 第4篇 采集西门子 S7-200 SMART: node-red/第4篇：基于ARMxy内置Node-red平台采集西门子S7-200 SMART PLC数据实操.md
       - 第5篇 Modbus RTU 采集实战: node-red/第5篇：基于ARMxy内置Node-RED平台的Modbus RTU数据采集实战.md
-      - 第6篇Modbus RTU+MQTT 上云: 第6篇：Node-RED Modbus RTU数据采集及MQTT云端上传演示.md
+      - 第6篇Modbus RTU+MQTT 上云: node-red/第6篇：Node-RED Modbus RTU数据采集及MQTT云端上传演示.md
       - 第7篇 自定义 TCP 通信: node-red/第7篇：基于 Node-RED 的自定义TCP协议通信实现.md
       - 第8篇 双数据库存储实现: node-red/第8篇：Node-RED 双数据库存储实现.md
       - 第9篇 Dashboard 可视化数据看板实现: node-red/第9篇：Node-RED Dashboard 可视化数据看板实现.md
